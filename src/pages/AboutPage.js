@@ -7,7 +7,7 @@ import AboutImage from '../assets/images/aboutimg.jpg'
 function AboutPage(props) {
 
     return (
-        <div>
+        <div className='animate__animated animate__fadeInUp'>
             <AboutHero title={props.title} />
 
             <Content className="row">

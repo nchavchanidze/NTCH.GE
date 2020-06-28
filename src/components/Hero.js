@@ -7,7 +7,7 @@ function Hero(props) {
     return (
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
             <Container fluid={true} className="py-5">
-                <div className='d-flex justify-content-between align-items-center'>
+                <div className='animate__fadeInDown d-flex justify-content-between align-items-center'>
                     <div>
                         <h1 className="h1 hero-title hero-welcome">Hi, I'm</h1>
                         {props.title && <h1 className="h1 hero-title hero-name">{props.title}</h1>}

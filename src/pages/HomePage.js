@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap';
 function HomePage(props) {
 
     return (
-        <Container>
+        <Container className="animate__animated animate__fadeInUp">
             <Hero title={props.title} subTitle={props.subTitle} text={props.text} />
             {/* <Carousel /> */}
         </Container>

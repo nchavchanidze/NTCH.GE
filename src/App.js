@@ -50,7 +50,7 @@ class App extends React.Component {
       <Router>
         <Container className="p-0" fluid={true}>
           <Container >
-            <Navbar className="navbar-dark" bg="tranparent" expand="lg">
+            <Navbar className="navbar-dark animate__animated animate__fadeInUp" bg="tranparent" expand="lg">
               <Navbar.Brand className="main-logo" style={logoColor}>NTCH<span className="logo-span" style={navLogo}>.</span>GE</Navbar.Brand>
               <Navbar.Toggle className="border-0" aria-controls="navbar-toogle" />
               <Navbar.Collapse id="navbar-toggle">
