@@ -3,14 +3,19 @@ import { useSpring, animated } from 'react-spring';
 
 function CardInfo(props) {
 
-    const style = useSpring({opacity: 1, from: {opacity: 0}});
+    const style = useSpring({ opacity: 1, from: { opacity: 0 } });
 
     return (
-        <animated.div className="g-card-info" style={style}>
-            <p className="g-card-title">{props.title}</p>
-            <p className="g-card-sub-title">{props.subTitle}</p>
-            <a href={props.link} target="_blank" rel="noopener noreferrer">View</a>
-        </animated.div>
+        <div className="pl-5 text-left">
+            <div className="g-card-text">
+                <h2 className="g-card-title">{props.title}</h2>
+                <h4 className="g-card-sub-title">{props.subTitle}</h4>
+                <p className="g-card-sub-title">{props.text}</p>
+            </div>
+            <animated.div className="g-card-info" style={style}>
+                <a href={props.link} target="_blank" rel="noopener noreferrer">View</a>
+            </animated.div>
+        </div>
     )
 }
 
