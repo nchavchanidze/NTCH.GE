@@ -1,10 +1,15 @@
 import React from 'react';
+import Carousel from '../components/Carousel';
+import PortfolioHero from '../components/Porfolio-Hero';
 
 class Portfolio extends React.Component {
     render() {
         return(
-            <p>Test</p>
-        )
+            <div>
+                <PortfolioHero />
+                <Carousel />
+            </div>
+            )
     }
 }
 
