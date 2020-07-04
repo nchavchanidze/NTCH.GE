@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from './Card';
 import Infinity from '../assets/images/Portfolio/infinity.png'
-import evverest from '../assets/images/evverest.jpg';
-import youtube from '../assets/images/youtube.jpg';
-import jima from '../assets/images/jima.jpg'
-import gela from '../assets/images/gela.jpg'
+import Standout from '../assets/images/Portfolio/standout.png'
+import Studio from '../assets/images/Portfolio/studio.png'
+import Apollo from '../assets/images/Portfolio/apollo.png'
+import Wooster from '../assets/images/Portfolio/wooster.png'
+
 import Container from 'react-bootstrap/Container';
 
 // const testStyle = {
@@ -22,40 +23,45 @@ class Carousel extends React.Component {
                     id: 0,
                     title: 'Infinity',
                     subTitle: 'Portfolio Website',
-                    text: "ssssssss",
+                    text: "This is simple Portfolio page made with <br> HTML, CSS, Javascript and Bootstrap",
                     imgSrc: Infinity,
                     link: 'https://nchavchanidze.github.io/Infinity/',
                     selected: false
                 },
                 {
                     id: 1,
-                    title: 'Nick TCH',
-                    subTitle: 'Like For Devs',
-                    imgSrc: youtube,
-                    link: 'https://www.youtube.com/channel/UCouTG1OOoqUqEihul921uOw',
+                    title: 'Standout',
+                    subTitle: 'Portfolio Website',
+                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    imgSrc: Standout,
+                    link: 'https://nchavchanidze.github.io/Standout/',
                     selected: false
                 },
                 {
                     id: 2,
-                    title: 'Evverest',
-                    subTitle: 'The Book For Devs',
-                    imgSrc: evverest,
-                    link: 'https://github.com',
+                    title: 'Studio',
+                    subTitle: 'Portfolio Website',
+                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    imgSrc: Studio,
+                    link: 'https://nchavchanidze.github.io/Studio/',
                     selected: false
-                },{
+                },
+                {
                     id: 3,
-                    title: 'Jima',
-                    subTitle: 'The Book For Devs',
-                    imgSrc: jima,
-                    link: 'https://github.com',
+                    title: 'Apollo',
+                    subTitle: 'Portfolio Website',
+                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    imgSrc: Apollo,
+                    link: 'https://nchavchanidze.github.io/Apolo/',
                     selected: false
                 },
                 {
                     id: 4,
-                    title: 'Gela',
-                    subTitle: 'The Book For Devs',
-                    imgSrc: gela,
-                    link: 'https://github.com',
+                    title: 'Wooster',
+                    subTitle: 'Portfolio Website',
+                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    imgSrc: Wooster,
+                    link: 'https://nchavchanidze.github.io/Wooster/',
                     selected: false
                 },
             ]
@@ -63,26 +69,26 @@ class Carousel extends React.Component {
     }    
 
 
-    handleCardClick = (id, card) => {
-        console.log(id)
-        let items = [...this.state.items];
+    // handleCardClick = (id, card) => {
+    //     console.log(id)
+    //     let items = [...this.state.items];
 
-        items[id].selected = items[id].selected ? false : true;
+    //     items[id].selected = items[id].selected ? false : true;
 
-        items.forEach(item => {
-            if(item.id !== id) {
-                item.selected = false;
-            }
-        });
+    //     items.forEach(item => {
+    //         if(item.id !== id) {
+    //             item.selected = false;
+    //         }
+    //     });
 
-        this.setState({
-            items
-        });
-    }
+    //     this.setState({
+    //         items
+    //     });
+    // }
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+            return <Card item={item}  key={item.id} />
         })
     }
 

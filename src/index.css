@@ -432,6 +432,28 @@ footer {
   color: #ff105e !important;
   background-color: #fff;
 }
+
+.project-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+  display: none;
+  z-index: 9999;
+}
+.project-card {
+  transition: .3s;
+}
+.project-card:hover .g-card-image {
+  opacity: .3;
+  transition: .3s;
+}
+.project-card:hover .project-link {
+  display: block;
+  transition: .3s;
+}
+
 /* footer::before {
   content: '';
     position: absolute;
