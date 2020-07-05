@@ -23,7 +23,7 @@ class Carousel extends React.Component {
                     id: 0,
                     title: 'Infinity',
                     subTitle: 'Portfolio Website',
-                    text: "This is simple Portfolio page made with <br> HTML, CSS, Javascript and Bootstrap",
+                    text: "HTML / CSS / Javascript / Bootstrap",
                     imgSrc: Infinity,
                     link: 'https://nchavchanidze.github.io/Infinity/',
                     selected: false
@@ -32,7 +32,7 @@ class Carousel extends React.Component {
                     id: 1,
                     title: 'Standout',
                     subTitle: 'Portfolio Website',
-                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    text: "HTML / CSS / Javascript / Bootstrap",
                     imgSrc: Standout,
                     link: 'https://nchavchanidze.github.io/Standout/',
                     selected: false
@@ -41,7 +41,7 @@ class Carousel extends React.Component {
                     id: 2,
                     title: 'Studio',
                     subTitle: 'Portfolio Website',
-                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    text: "HTML / CSS / Javascript / Bootstrap",
                     imgSrc: Studio,
                     link: 'https://nchavchanidze.github.io/Studio/',
                     selected: false
@@ -50,7 +50,7 @@ class Carousel extends React.Component {
                     id: 3,
                     title: 'Apollo',
                     subTitle: 'Portfolio Website',
-                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    text: "HTML / CSS / Javascript / Bootstrap",
                     imgSrc: Apollo,
                     link: 'https://nchavchanidze.github.io/Apolo/',
                     selected: false
@@ -59,7 +59,7 @@ class Carousel extends React.Component {
                     id: 4,
                     title: 'Wooster',
                     subTitle: 'Portfolio Website',
-                    text: "This is simple Portfolio page made with \n\r HTML, CSS, Javascript and Bootstrap",
+                    text: "HTML / CSS / Javascript / Bootstrap",
                     imgSrc: Wooster,
                     link: 'https://nchavchanidze.github.io/Wooster/',
                     selected: false
@@ -95,7 +95,7 @@ class Carousel extends React.Component {
 
     render() {
         return(
-            <Container>
+            <Container className="animate__animated animate__fadeInUp">
                     {this.makeItems(this.state.items)}
             </Container>
         );

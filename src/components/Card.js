@@ -14,15 +14,14 @@ const projectIcon = {
 
 function Card(props) {
     return (
-        <div className="d-flex align-items-top g-card mb-5 flex-wrap">
+        <div className="d-flex align-items-top g-card justify-content-between mb-5">
+            <CardInfo title={props.item.title} subTitle={props.item.subTitle} link={props.item.link} text={props.item.text} />
             <div className="position-relative project-card">
-                
                 <a href={props.item.link}  className="project-link p-0 m-0" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon style={projectIcon} icon={['fas', 'link']} link={props.item.link} />
                     </a>
                 <img className="g-card-image" src={props.item.imgSrc} alt={props.item.imgSrc} />
             </div>
-            <CardInfo title={props.item.title} subTitle={props.item.subTitle} link={props.item.link} text={props.item.text} />
         </div>
     )
 }

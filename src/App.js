@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import {Container, Navbar, Nav} from 'react-bootstrap'
+import {Container, Navbar, Nav} from 'react-bootstrap';
+import LoadingBar from 'react-top-loading-bar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -51,6 +52,11 @@ class App extends React.Component {
   render() {
     return (
       <Router>
+        <LoadingBar
+          height={3}
+          color='#f11946'
+          onRef={ref => (this.LoadingBar = ref)}
+        />
         <Container className="p-0" fluid={true}>
           <Container >
             <Navbar className="navbar-dark animate__animated animate__fadeInUp" bg="tranparent" expand="lg">
