@@ -45,17 +45,24 @@ class App extends React.Component {
       },
       contact: {
         title: 'Lets Talk',
-      }
+      },
+      loadingBarProgress: 0
+
     }
   }
+
+  onLoaderFinished = () => {
+    this.setState({ loadingBarProgress: 100 });
+  };
 
   render() {
     return (
       <Router>
         <LoadingBar
+          progress={this.state.loadingBarProgress}
           height={3}
-          color='#f11946'
-          onRef={ref => (this.LoadingBar = ref)}
+          color='#ff105e'
+          onLoaderFinished={() => this.onLoaderFinished()}
         />
         <Container className="p-0" fluid={true}>
           <Container >

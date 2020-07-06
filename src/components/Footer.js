@@ -24,6 +24,9 @@ function Footer() {
                 <Container className="d-flex justify-content-center">
                     <a href="mailto:nikolozchavchanidze@gmail.com" className="hire-btn">Hire Me</a>
                 </Container>
+                <Container className="d-flex justify-content-center pt-5">
+                    <p>&copy; 2020 NTCH. All rights reserved. </p>
+                </Container>
             </Container>
         </footer>
     )
