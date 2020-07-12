@@ -14,7 +14,7 @@ const iconStyle = {
 
 function FooterSocials(props) {
     return (
-        <div className="d-flex justify-content-between align-items-center w-25 pt-2">
+        <div className="d-flex justify-content-between align-items-center footer-socials pt-2 ">
             <a href="https://www.facebook.com/nikoloztchavtchanidze/" target="_blank" rel="noopener noreferrer" className="p-0 m-0">
                 <FontAwesomeIcon style={iconStyle} icon={['fab', 'facebook-f']} />
             </a>

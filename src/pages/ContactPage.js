@@ -65,7 +65,7 @@ class ContactPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="animate__animated animate__fadeInUp">
                 <ContactHero title={this.props.title} />
 
                 <Content>

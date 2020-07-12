@@ -5,7 +5,7 @@ import PortfolioHero from '../components/Porfolio-Hero';
 class Portfolio extends React.Component {
     render() {
         return(
-            <div>
+            <div className="animate__animated animate__fadeInUp">
                 <PortfolioHero />
                 <Carousel />
             </div>

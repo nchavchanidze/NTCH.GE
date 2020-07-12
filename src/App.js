@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import {Container, Navbar, Nav} from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import LoadingBar from 'react-top-loading-bar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -17,10 +17,13 @@ const navLogo = {
 const logoColor = {
   color: '#ffffff'
 }
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loadingBarProgress: 0,
       title: 'NTCH - Personal Portfolio',
       headerLinks: [
         { title: 'Home', path: '/' },
@@ -33,9 +36,6 @@ class App extends React.Component {
         title: 'NIKOLOZ TCHAVTCHANIDZE',
         subTitle: 'Developer',
         text: 'HTML / CSS / SASS / BOOTSTRAP / JAVASCRIPT/ REACT.JS',
-        AboutTitle: 'About',
-        PortfolioTitle: 'Portfolio',
-        ContactTitle: 'Contact'
       },
       about: {
         title: 'About me',
@@ -46,7 +46,6 @@ class App extends React.Component {
       contact: {
         title: 'Lets Talk',
       },
-      loadingBarProgress: 0
 
     }
   }
@@ -57,38 +56,47 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <div>
         <LoadingBar
           progress={this.state.loadingBarProgress}
           height={3}
           color='#ff105e'
           onLoaderFinished={() => this.onLoaderFinished()}
         />
-        <Container className="p-0" fluid={true}>
-          <Container >
-            <Navbar className="navbar-dark animate__animated animate__fadeInUp" bg="tranparent" expand="lg">
+        <Router>
+          <Container className="p-0" fluid={true}>
+            <Container >
+              <Navbar className="navbar-dark animate__animated animate__fadeInUp" bg="tranparent" expand="lg">
                 <Navbar.Brand style={logoColor}><a className="main-logo m-0 p-0" href="/">NTCH<span className="logo-span" style={navLogo}>.</span>GE</a></Navbar.Brand>
-              <Navbar.Toggle className="border-0" aria-controls="navbar-toogle" />
-              <Navbar.Collapse id="navbar-toggle">
-                <Nav className="ml-auto">
-                  <Link className="nav-link" to="/">Home</Link>
-                  <Link className="nav-link" to="/about">About</Link>
-                  <Link className="nav-link" to="/portfolio">Porfolio</Link>
-                  <Link className="nav-link" to="/contact">Contact</Link>
+                <Navbar.Toggle className="border-0 p-0" aria-controls="navbar-toogle">
+                  <div className="d-flex justify-content-between align-items-center h-100 flex-column burger-menu position-relative">
+                    <input type="checkbox" id="nav-checkbox" />
+                    <span className="toogle-line-1"></span>
+                    <span className="toogle-line-2 mt-1"></span>
+                    <span className="toogle-line-3 mt-1"></span>
+                  </div>
+                </Navbar.Toggle>
+                <Navbar.Collapse id="navbar-toggle">
+                  <Nav className="ml-auto">
+                    <Link className="nav-link" to="/">Home</Link>
+                    <Link className="nav-link" to="/about">About</Link>
+                    <Link className="nav-link" to="/portfolio">Porfolio</Link>
+                    <Link className="nav-link" to="/contact">Contact</Link>
 
-                </Nav>
-              </Navbar.Collapse>
-            </Navbar>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+            </Container>
+            <Route path="/" exact render={() => <HomePage welcome={this.state.home.welcome} title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} AboutTitle={this.state.about.title} PortfolioTitle={this.state.portfolio.title} ContactTitle={this.state.contact.title} />} />
+            <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
+            <Route path="/portfolio" render={() => <PortfolioPage title={this.state.portfolio.title} />} />
+            <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
+
+            <Footer />
+
           </Container>
-          <Route path="/" exact render={() => <HomePage welcome={this.state.home.welcome} title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} AboutTitle={this.state.home.AboutTitle} PortfolioTitle={this.state.home.PortfolioTitle} ContactTitle={this.state.home.ContactTitle} />} />
-          <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
-          <Route path="/portfolio" render={() => <PortfolioPage title={this.state.portfolio.title} />} />
-          <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
-          
-          <Footer />
-
-        </Container>
-      </Router>
+        </Router>
+      </div>
     );
   }
 }
