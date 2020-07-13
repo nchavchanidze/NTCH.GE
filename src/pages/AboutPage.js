@@ -24,14 +24,6 @@ function AboutPage(props) {
                         be moonlight cordially curiosity. Delay rapid joy share allow age manor six.
                         Went why far saw many knew. Exquisite excellent son gentleman acuteness her. Do is voice total power mr ye might round still.
                 </p>
-
-                    <p>
-                        On am we offices expense thought. Its hence ten smile age means.
-                        Seven chief sight far point any. Of so high into easy.
-                        Dashwoods eagerness oh extensive as discourse sportsman frankness. Husbands see
-                        disposed surprise likewise humoured yet pleasure. Fifteen no inquiry cordial so resolve garrets as.
-                        Impression was estimating surrounded solicitude indulgence son shy.
-                </p>
                 </Col>
                 <Col md={6} sm={12}>
                         <img className='about-image w-100' src={AboutImage} alt={AboutImage} />
