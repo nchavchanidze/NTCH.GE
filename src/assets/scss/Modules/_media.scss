@@ -1,0 +1,44 @@
+@media only screen and (max-width: 991px) {
+    .nav-link {
+        text-align: center;
+    }
+
+    .g-card {
+        flex-wrap: wrap;
+    }
+
+    .g-card-info-text {
+        padding-left: 0 !important;
+        padding-top: 3rem;
+    }
+
+    .footer-socials {
+        width: 34% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-img {
+        display: none;
+    }
+
+    .h1 {
+        font-size: 2.3rem !important;
+    }
+
+    .footer-socials {
+        width: 40% !important;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .g-card-image {
+        height: 100%;
+        width: 100%;
+    }
+
+    .footer-socials,
+    .hero-socials {
+        width: 80% !important;
+    }
+}

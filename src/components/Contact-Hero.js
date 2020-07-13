@@ -10,7 +10,7 @@ function ContactHero(props) {
             <Container fluid={true}>
                 <Row className="justify-content-center py-5">
                     <Col md={8} sm={12}>
-                        {props.title && <h1 className="h1 hero-title">{props.title}</h1>}
+                        {props.title && <h1 className="h1 hero-title title-ba text-center text-uppercase">{props.title}</h1>}
                     </Col>
                 </Row>
             </Container>

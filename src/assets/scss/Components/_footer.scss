@@ -1,0 +1,38 @@
+footer {
+    position: relative;
+    background-color: $main_color;
+}
+
+.hire-btn {
+    border: 2px solid $white !important;
+    border-radius: 25px !important;
+    padding: 5px 25px !important;
+
+    &:hover {
+        color: $main_color !important;
+        background-color: $white;
+    }
+}
+.footer-socials:first-child {
+    width: 25% !important;
+}
+
+.footer-socials {
+    width: 25%;
+}
+
+.footer-logo {
+    color: $white !important;
+
+    .footer-logo-span {
+        color: $footer_span !important;
+    }
+
+    &:hover {
+        color: $white !important;
+
+        .footer-logo-span {
+            color: $footer_span !important;
+        }
+    }
+}

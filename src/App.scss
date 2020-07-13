@@ -1,0 +1,15 @@
+//Partials
+@import './assets/scss/Partials/reset';
+
+//Modules
+@import './assets/scss/Modules/base';
+@import './assets/scss/Modules/variables';
+@import './assets/scss/Modules/media';
+
+//Components
+@import './assets/scss/Components/nav';
+@import './assets/scss/Components/hero';
+@import './assets/scss/Components/card';
+@import './assets/scss/Components/scrollbar';
+@import './assets/scss/Components/contact';
+@import './assets/scss/Components/footer';

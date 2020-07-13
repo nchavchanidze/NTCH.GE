@@ -1,0 +1,44 @@
+.success-msg {
+    color: $white;
+    padding: 10px 15px;
+}
+.send-btn {
+    border: 2px solid $white !important;
+    border-radius: 25px !important;
+    padding: 5px 25px !important;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    &:hover {
+        color: $white !important;
+        background-color: $main_color !important;
+        border-color: $main_color !important;
+    }
+}
+
+.err-msg {
+    color: $sec_color;
+    padding: 10px 15px;
+}
+.form-control {
+    background-color: transparent !important;
+
+    &:focus {
+        color: $white !important;
+        background-color: transparent !important;
+        border-color: $main_color !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.form-label {
+    color: $white;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-message {
+    min-height: 200px !important;
+}
