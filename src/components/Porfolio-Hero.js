@@ -12,7 +12,7 @@ function PortfolioHero(props) {
     return (
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
             <Container fluid={true}>
-                <Row className="justify-content-center py-5">
+                <Row className="justify-content-center mt-5 py-5">
                     <Col md={8} sm={12}>
                         {PortfolioTitle.ptitle && <h1 className="text-center title-ba h1 about-hero-title">{PortfolioTitle.ptitle}</h1>}
                     </Col>
