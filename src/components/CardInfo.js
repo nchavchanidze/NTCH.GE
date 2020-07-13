@@ -8,7 +8,7 @@ library.add(fas, faLink)
 
 const projectIcon = {
     color: '#ff105e',
-    fontSize: 15,
+    fontSize: 20,
     transition: '.3s'
 }
 
@@ -24,7 +24,7 @@ function CardInfo(props) {
                 <p className="g-card-sub-title">{props.text}</p>
             </div>
             <animated.div className="g-card-info m-0" style={style}>
-                <a href={props.link} target="_blank" rel="noopener noreferrer" className="p-0 m-0"><FontAwesomeIcon className="pr-2" style={projectIcon} icon={['fas', 'link']} />{props.link}</a>
+                <a href={props.link} target="_blank" rel="noopener noreferrer" className="d-flex align-items-center p-0 m-0"><FontAwesomeIcon className="pr-2" style={projectIcon} icon={['fas', 'link']} />{props.link}</a>
             </animated.div>
         </div>
     )
