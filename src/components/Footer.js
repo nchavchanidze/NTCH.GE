@@ -25,7 +25,7 @@ function Footer() {
                     <a href="mailto:nikolozchavchanidze@gmail.com" className="hire-btn">Hire Me</a>
                 </Container>
                 <Container className="d-flex justify-content-center pt-5">
-                    <p>&copy; 2020 NTCH.GE. All rights reserved. </p>
+                    <p>&copy; 2020 NTCH.GE All rights reserved. </p>
                 </Container>
             </Container>
         </footer>
