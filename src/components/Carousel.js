@@ -1,5 +1,10 @@
 import React from 'react';
 import Card from './Card';
+import DiscordBot from '../assets/images/Portfolio/discordbot.jpg'
+import WeatherApp from '../assets/images/Portfolio/weatherapp.jpg'
+import RecipeApp from '../assets/images/Portfolio/recipeapp.jpg'
+import SnakeGame from '../assets/images/Portfolio/snakegame.jpg'
+import TodoApp from '../assets/images/Portfolio/todoapp.png'
 import Infinity from '../assets/images/Portfolio/infinity.png'
 import Standout from '../assets/images/Portfolio/standout.png'
 import Studio from '../assets/images/Portfolio/studio.png'
@@ -17,10 +22,55 @@ import Container from 'react-bootstrap/Container';
 class Carousel extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             items: [
                 {
                     id: 0,
+                    title: 'Discord Bot',
+                    subTitle: 'Discord Bot with Custom Commands',
+                    text: "Discord.js / Node.js",
+                    imgSrc: DiscordBot,
+                    link: 'https://github.com/nchavchanidze/Discord-Bot',
+                    selected: false
+                },
+                {
+                    id: 1,
+                    title: 'Weather App',
+                    subTitle: 'Weather React App',
+                    text: "React.js",
+                    imgSrc: WeatherApp,
+                    link: 'https://github.com/nchavchanidze/Weather-App',
+                    selected: false
+                },
+                {
+                    id: 2,
+                    title: 'Recipe App',
+                    subTitle: 'Recipe Search App',
+                    text: "React.js",
+                    imgSrc: RecipeApp,
+                    link: 'https://github.com/nchavchanidze/Recipe-Search-App',
+                    selected: false
+                },
+                {
+                    id: 3,
+                    title: 'Todo App',
+                    subTitle: 'Todo React app',
+                    text: "React.js",
+                    imgSrc: TodoApp,
+                    link: 'https://github.com/nchavchanidze/Todo-app',
+                    selected: false
+                },
+                {
+                    id: 4,
+                    title: 'Snake',
+                    subTitle: 'Snake Game',
+                    text: "React.js",
+                    imgSrc: SnakeGame,
+                    link: 'https://nchavchanidze.github.io/Snake-game/',
+                    selected: false
+                },
+                {
+                    id: 5,
                     title: 'Infinity',
                     subTitle: 'Portfolio Website',
                     text: "HTML / CSS / Javascript / Bootstrap",
@@ -29,7 +79,7 @@ class Carousel extends React.Component {
                     selected: false
                 },
                 {
-                    id: 1,
+                    id: 6,
                     title: 'Standout',
                     subTitle: 'Portfolio Website',
                     text: "HTML / CSS / Javascript / Bootstrap",
@@ -38,7 +88,7 @@ class Carousel extends React.Component {
                     selected: false
                 },
                 {
-                    id: 2,
+                    id: 7,
                     title: 'Studio',
                     subTitle: 'Portfolio Website',
                     text: "HTML / CSS / Javascript / Bootstrap",
@@ -47,7 +97,7 @@ class Carousel extends React.Component {
                     selected: false
                 },
                 {
-                    id: 3,
+                    id: 8,
                     title: 'Apollo',
                     subTitle: 'Portfolio Website',
                     text: "HTML / CSS / Javascript / Bootstrap",
@@ -56,7 +106,7 @@ class Carousel extends React.Component {
                     selected: false
                 },
                 {
-                    id: 4,
+                    id: 9,
                     title: 'Wooster',
                     subTitle: 'Portfolio Website',
                     text: "HTML / CSS / Javascript / Bootstrap",
@@ -66,7 +116,7 @@ class Carousel extends React.Component {
                 },
             ]
         }
-    }    
+    }
 
 
     // handleCardClick = (id, card) => {
@@ -88,15 +138,15 @@ class Carousel extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item}  key={item.id} />
+            return <Card item={item} key={item.id} />
         })
     }
 
 
     render() {
-        return(
+        return (
             <Container className="animate__animated animate__fadeInUp">
-                    {this.makeItems(this.state.items)}
+                {this.makeItems(this.state.items)}
             </Container>
         );
     }

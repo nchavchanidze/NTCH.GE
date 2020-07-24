@@ -1,5 +1,4 @@
 {
-  "homepage": "http://nchavchanidze.github.io/NTCH.GE",
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +21,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
-    "react-top-loading-bar": "^1.2.0"
+    "react-top-loading-bar": "^1.2.0",
+    "swiper": "^6.0.4"
   },
   "scripts": {
     "predeploy": "npm run build",
