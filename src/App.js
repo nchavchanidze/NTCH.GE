@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import LoadingBar from 'react-top-loading-bar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -23,7 +22,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loadingBarProgress: 0,
       title: 'NTCH - Personal Portfolio',
       headerLinks: [
         { title: 'Home', path: '/' },
@@ -35,7 +33,7 @@ class App extends React.Component {
         welcome: 'Hi, I\'m',
         title: 'NIKOLOZ TCHAVTCHANIDZE',
         subTitle: 'Developer',
-        text: 'HTML / CSS / SASS / BOOTSTRAP / JAVASCRIPT/ REACT.JS',
+        text: 'HTML / CSS / SASS / BOOTSTRAP / JAVASCRIPT/ REACT.JSs',
       },
       about: {
         title: 'About me',
@@ -57,12 +55,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <LoadingBar
-          progress={this.state.loadingBarProgress}
-          height={3}
-          color='#ff105e'
-          onLoaderFinished={() => this.onLoaderFinished()}
-        />
         <Router>
           <Container className="p-0" fluid={true}>
             <Container >
