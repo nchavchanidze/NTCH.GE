@@ -16,7 +16,6 @@ function Footer() {
     return (
         <footer className="mt-5 pb-5">
             <Container fluid={true}>
-
                 <Container className="footer-container d-flex justify-content-center align-items-center flex-column pt-5 pb-5" >
                     <p className="main-logo footer-logo" style={footerlogo}>NTCH<span className="logo-span footer-logo-span" style={footerLogodot}>.</span>GE</p>
                     <FooterSocials />
