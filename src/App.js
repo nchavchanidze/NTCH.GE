@@ -33,7 +33,7 @@ class App extends React.Component {
         welcome: 'Hi, I\'m',
         title: 'NIKOLOZ TCHAVTCHANIDZE',
         subTitle: 'Developer',
-        text: 'HTML / CSS / SASS / BOOTSTRAP / JAVASCRIPT/ REACT.JS',
+        text: 'HTML / CSS / SASS / BOOTSTRAP / JAVASCRIPT / REACT.JS',
       },
       about: {
         title: 'About me',
