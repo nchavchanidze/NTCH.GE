@@ -48,10 +48,6 @@ class App extends React.Component {
     }
   }
 
-  onLoaderFinished = () => {
-    this.setState({ loadingBarProgress: 100 });
-  };
-
   render() {
     return (
       <div>
